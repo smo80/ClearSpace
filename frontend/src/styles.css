@@ -1,0 +1,418 @@
+/* Comprehensive CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif; /* Ensure Roboto is applied here */
+  background: linear-gradient(to right, #121212, #323232);
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.dark-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2E8B57;
+}
+
+h2, h3 {
+  font-weight: 500;
+  color: #2E8B57;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: linear-gradient(to bottom right, #1E1E1E, #282828);
+  border: 3px solid #2E8B57;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.left-side, .center, .right-side {
+  width: 32%;
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .left-side, .center, .right-side {
+    width: 100%;
+  }
+}
+
+
+.focus-timer,
+.task-list,
+.distraction-blocker {
+  margin-bottom: 20px;
+  background-color: #2A2A2A;
+  padding: 20px;
+  border-radius: 1px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .focus-timer,
+.dark-mode .task-list,
+.dark-mode .distraction-blocker {
+  background-color: #f0f0f0;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #2E8B57;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  background-color: #1E7A46;
+  transform: translateY(-2px);
+}
+
+button.delete-btn {
+  background-color: #FF6347;
+  margin-left: 10px;
+}
+
+input[type='text'],
+input[type='number'] {
+  padding: 10px;
+  width: calc(100% - 20px);
+  margin-bottom: 10px;
+  background-color: #2A2A2A;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+input[type='text']:focus,
+input[type='number']:focus {
+  border-color: #2E8B57;
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+li .task {
+  flex: 1;
+}
+
+.top-right-buttons {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+.top-right-buttons button {
+  padding: 5px 10px;
+  margin-left: 5px;
+  background-color: #2E8B57;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.top-right-buttons button:hover {
+  background-color: #1E7A46;
+  transform: translateY(-2px);
+}
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .dark-mode {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  h1 {
+    text-align: center;
+    padding-top: 20px;
+    color: #2E8B57;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+  
+  .focus-timer,
+  .task-list,
+  .distraction-blocker {
+    margin-bottom: 20px;
+    background-color: #1E1E1E;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .dark-mode .focus-timer,
+  .dark-mode .task-list,
+  .dark-mode .distraction-blocker {
+    background-color: #f0f0f0;
+  }
+  
+  .button {
+  padding: 5px 10px;
+  background-color: #2e8b57;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+  
+  button.delete-btn {
+    background-color: #FF6347;
+    margin-left: 10px;
+  }
+  
+  input[type='text'],
+  input[type='number'] {
+    padding: 8px;
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Top right buttons styling */
+  .top-right-buttons {
+    position: fixed; /* Fix the buttons to the viewport */
+    top: 10px; /* Align to the top */
+    right: 10px; /* Align to the right */
+    display: flex; /* Align buttons horizontally */
+    gap: 10px; /* Space between buttons */
+    z-index: 1000; /* Ensure buttons stay on top of other elements */
+  }
+  
+  .top-right-buttons button {
+    padding: 8px 15px;
+    background-color: #2E8B57;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+  }
+  
+  .top-right-buttons button:hover {
+    background-color: #1E7A46;
+  }
+  
+  .button {
+    padding: 5px 10px;
+    background-color: #2e8b57;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .feedback-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2E8B57;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .star-rating {
+    display: inline-flex;
+    cursor: pointer;
+    font-size: 2em;
+    position: relative;
+  }
+  
+  .star {
+    color: #ccc;
+    margin: 0 10px;
+    transition: color 0.2s;
+  }
+  
+  .star.filled {
+    color: #ffcc00;
+  }
+  
+  .star:hover ~ .star {
+    color: #ccc; /* Ensure stars to the right of hover stay unlit */
+  }
+  
+  .star:hover,
+  .star:hover ~ .star:hover {
+    color: #ffcc00; /* Light up stars from left to right */
+  }
+  
+  .star-container {
+    display: flex;
+    position: relative;
+  }
+  
+  
+  .feedback-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center vertically */
+    height: 100vh; /* Full viewport height to center vertically */
+    width: 80%; /* Ensure the form has a consistent width */
+    max-width: 600px; /* Limit the maximum width */
+    margin: 0 auto; /* Center horizontally */
+  }
+  
+  .feedback-form label {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Two columns: 1 part question, 2 parts answer */
+    align-items: center; /* Vertically align items */
+    margin-bottom: 15px; /* Add spacing between questions */
+    width: 100%; /* Ensure labels span the full width */
+    gap: 10px; /* Add spacing between columns */
+  }
+  
+  .feedback-form label span {
+    text-align: left; /* Align questions to the left */
+  }
+  
+  .feedback-form label select,
+  .feedback-form label textarea {
+    width: 100%; /* Make inputs stretch to fit the column */
+    height: 30px;
+    resize: none; /* Disable resizing for textareas */
+  }
+  
+  .feedback-form label textarea {
+    height: 60px; /* Adjust textarea height */
+  }
+  
+  .feedback-form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2E8B57;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .feedback-form button:hover {
+    background-color: #1E7A46;
+  }
+  
+  .star-container {
+    display: flex;
+    justify-content: flex-start; /* Align stars to the left */
+    gap: 5px; /* Add spacing between stars */
+  }
+  
+  .star {
+    color: #ccc;
+    margin: 0 5px;
+    font-size: 2em;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .star.filled {
+    color: #ffcc00;
+  }
+  
+  
+  
+  .star-rating {
+    margin-left: 10px;
+  }
+  
+  .feedback-form button {
+    display: block;
+    margin: 20px auto 0;
+  }
+  
+  .meditation-session {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Add this line to center horizontally */
+    height: 100%; /* Ensure it takes full height of the parent */
+  }
+  
+  .meditation-session video {
+    width: 900px;
+    max-width: 100%;
+    height: auto;
+  }

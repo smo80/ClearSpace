@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Focus Timer App</title>
+  <link rel="stylesheet" href="focus.css">
+</head>
+<body>
+  <div class="top-right-buttons">
+    <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    <button id="write-review-btn">Write a Review</button>
+  </div>
+  <div class="container">
+    <div class="left-side">
+      <!-- Task Management section -->
+      <div class="task-list">
+        <h2>Task Management</h2>
+        <input type="text" id="task-input" placeholder="Add a new task">
+        <button onclick="addTask()">Add Task</button>
+        <ul id="tasks"></ul>
+      </div>
+    </div>
+    <div class="center">
+      <!-- Focus Timer section -->
+      <div class="focus-timer focus-timer-box">
+        <h2>Focus Timer</h2>
+        <input type="number" id="focus-duration" placeholder="Focus Duration (minutes)" min="1">
+        <p id="timer-display">25:00</p>
+        <button onclick="startFocusTimer()">Start</button>
+        <button onclick="resetFocusTimer()">Reset</button>
+      </div>
+    </div>
+    <div class="right-side">
+      <!-- Distraction Blocker section -->
+      <div class="distraction-blocker">
+        <h2>Distraction Blocker</h2>
+        <input type="text" id="website-input" placeholder="Enter website to block">
+        <button onclick="addWebsite()">Add Website</button>
+        <ul id="websites"></ul>
+      </div>
+    </div>
+  </div>
+  <script src="focus.js"></script>
+</body>
+</html>
